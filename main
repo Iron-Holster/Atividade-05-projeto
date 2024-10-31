@@ -1,0 +1,16 @@
+"""
+Integrantes: Fabrício Silvany || Victor Andrade || Jonatas Fernandes
+
+Objetivo: Criar um programa para o cliente de uma biblioteca acessar, tendo como opções em seu menu: Livros disponiveis, carrinho, gerenciar carrinho/finalizar aluguel, sair.
+O usuario deverá fazer um login previamente que detectará se ele é um assinante da biblioteca, o que o dará um desconto de 20% no aluguel de livros
+
+Usuario assinante:
+nome: Marta
+email: Marta@gmail.com
+senha: 123
+
+"""
+import os
+os.system("cls || clear")
+from sqlalchemy import create_engine, Column, String, Float, Integer
+from sqlalchemy.orm import sessionmaker, declarative_base
