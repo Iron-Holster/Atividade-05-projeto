@@ -14,3 +14,7 @@ import os
 os.system("cls || clear")
 from sqlalchemy import create_engine, Column, String, Float, Integer
 from sqlalchemy.orm import sessionmaker, declarative_base
+
+#Funções
+
+#Menu
