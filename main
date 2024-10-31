@@ -1,0 +1,63 @@
+"""
+Integrantes: Fabrício Silvany || Victor Andrade || Jonatas Fernandes
+
+Objetivo: Criar um programa para o cliente de uma biblioteca acessar, tendo como opções em seu menu: Livros disponiveis, carrinho, gerenciar carrinho/finalizar aluguel, sair.
+O usuario deverá fazer um login previamente que detectará se ele é um assinante da biblioteca, o que o dará um desconto de 20% no aluguel de livros
+
+Usuario assinante:
+nome: Marta
+email: Marta@gmail.com
+senha: 123
+
+"""
+import os
+os.system("cls || clear")
+from sqlalchemy import create_engine, Column, String, Float, Integer
+from sqlalchemy.orm import sessionmaker, declarative_base
+
+#Funções
+
+def login():
+    print("-==| BIBLIOTECA DIGITAL |==-")
+    login_usu = input("Insira seu nome de usuario: ")
+    senha_usu = input("Insira sua senha: ")
+    return login_usu, senha_usu
+
+def menu_biblioteca_cliente():
+    print("-==| BIBLIOTECA DIGITAL |==-")
+    print("""
+    1 | Livros disponiveis
+    2 | Carrinho
+    3 | Finalizar aluguel
+    4 | Se tornar assinante
+    5 | Sair
+    """)
+def menu_biblioteca_assinante():
+    print("-==| BIBLIOTECA DIGITAL |==-")
+    print("""
+    1 | Livros disponiveis
+    2 | Carrinho
+    3 | Finalizar aluguel
+    4 | Cancelar assinatura
+    5 | Sair
+    """)
+#Menu
+login_usu, senha_usu = login()
+while True:
+    #Nota de Victor para Fabricio: Usa o Banco de dados para checar se o login é de um usuario assinante. 
+    #Caso seja, vai exibir menu_biblioteca_cliente, caso não ele vai exibir menu_biblioteca_assinante
+    #Eu faço o if/else, só preciso da sua parte de banco de dados para validar
+    menu_biblioteca_cliente()
+    opcao=input("Selecione uma opção:")
+    match(opcao):
+        case 1:
+            #1 | Livros disponiveis
+        case 2:
+            #2 | Carrinho
+        case 3:
+            #3 | Finalizar aluguel
+        case 4:
+            #4 | Se tornar assinante
+        case 5:
+            #5 | Sair
+            break
