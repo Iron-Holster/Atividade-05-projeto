@@ -17,4 +17,47 @@ from sqlalchemy.orm import sessionmaker, declarative_base
 
 #Funções
 
-#Menu
+def livros_disponiveis(Livros):
+    livros=input(""""
+      |1| jogos vorazes: R$ 25,00          
+      |2| jornada das estrelas: R$ 20,00       
+      |3| luta pela liberdade: R$ 30,00      
+      |4| unidos por uma causa maior:R$ 50,00         
+                 """)
+    
+    Livros=Livros(livros_guardado=livros)
+   
+
+def adicionar_livros(livro):
+
+    titulo_livro=input("digite o titulo do livro: ")
+    valor_livro=float(input("digite o falor do livro: "))
+
+    livro=livro(livro_nome=titulo_livro,preco_livro=valor_livro)
+
+#login e senha 
+
+login = input("digite seu login:")
+senha = input("digite sua senha: ")
+
+login_salvo = login == "marta"
+senha_salva = senha == "123"
+
+
+login = input("digite seu login:")
+senha = input("digite sua senha: ")
+if login_salvo == login and senha_salva ==senha :
+ print("bem vindo:")
+  
+
+  
+# calculo promoçao acinante  
+asssinante=input("digite o nome do assinate: ")
+senha=int(input("digite sua senha: "))
+preco_livro=float(input("digite o preço do livro: "))
+
+novo= preco_livro - (preco_livro * 0.10)
+
+print(f"valor original do lifro: {preco_livro:.2f}. com o desconto para assinante de 10%:{novo:.2f}")
+
+#Menu 
