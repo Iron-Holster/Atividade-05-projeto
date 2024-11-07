@@ -17,4 +17,53 @@ from sqlalchemy.orm import sessionmaker, declarative_base
 
 #Funções
 
+def limpar_terminal():
+    os.system("cls || clear")
+
+def logo():
+    print("-==| BIBLIOTECA DIGITAL |==-")
+
+def login():
+    nome_usu = input("Digite seu nome de usuario: ")
+    senha_usu = int(input("Digite sua senha: "))
+    return nome_usu, senha_usu
+def menu_cliente():
+    print("""
+    1 | Livros disponiveis
+    2 | Carrinho
+    3 | Finalizar compra
+    4 | Se tornar assinante
+    5 | Sair
+    """)
+def menu_Assinante():
+    print("""
+    1 | Livros disponiveis
+    2 | Carrinho
+    3 | Finalizar compra
+    4 | Cancelar assinatura
+    5 | Sair
+    """)
 #Menu
+logo()
+login()
+
+while True:
+    limpar_terminal()
+    logo()
+    menu_cliente()
+    opcao = int(input("\nSelecione a operação desejada: "))
+
+    match(opcao):
+        case 1:
+            #1 | Livros disponiveis
+        case 2:
+            #2 | Carrinho
+        case 3:
+            #3 | Finalizar compra
+        case 4:
+            #4 | Cancelar assinatura
+        case 5:
+            #5 | Sair
+            break
+        case _:
+            print("Opção invalida\nTente novamente\n")
